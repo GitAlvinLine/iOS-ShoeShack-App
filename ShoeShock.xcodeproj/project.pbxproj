@@ -56,6 +56,10 @@
 		DB8A9B63250D6CC000BE86F4 /* ShoeShock */ = {
 			isa = PBXGroup;
 			children = (
+				DB8A9B7F250D976200BE86F4 /* Services */,
+				DB8A9B7E250D975D00BE86F4 /* Controller */,
+				DB8A9B7D250D975800BE86F4 /* View */,
+				DB8A9B7C250D975300BE86F4 /* Model */,
 				DB8A9B64250D6CC000BE86F4 /* AppDelegate.swift */,
 				DB8A9B66250D6CC000BE86F4 /* SceneDelegate.swift */,
 				DB8A9B68250D6CC000BE86F4 /* ViewController.swift */,
@@ -65,6 +69,34 @@
 				DB8A9B72250D6CC200BE86F4 /* Info.plist */,
 			);
 			path = ShoeShock;
+			sourceTree = "<group>";
+		};
+		DB8A9B7C250D975300BE86F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB8A9B7D250D975800BE86F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB8A9B7E250D975D00BE86F4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DB8A9B7F250D976200BE86F4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
