@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "mercurialVapor13EliteMbappéRosa.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "mercurialVapor13EliteMbappéRosa@2x.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "mercurialVapor13EliteMbappéRosa@3x.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
