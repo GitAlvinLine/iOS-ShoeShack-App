@@ -106,11 +106,28 @@
                     <navigationItem key="navigationItem" title="SHOE SHOCK" id="DPm-XK-Zsf"/>
                     <connections>
                         <outlet property="productsCollection" destination="wed-OY-L0P" id="h1B-Pg-Hfs"/>
+                        <segue destination="XmJ-8o-e0c" kind="show" identifier="ShoeItemVC" id="7aJ-lO-vev"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="119.86607142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FOV-NM-ozu">
+            <objects>
+                <viewController id="XmJ-8o-e0c" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g4B-YI-eu6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="1TS-ui-LbJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aAx-aS-mkw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zmb-vn-0Sh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1975" y="120"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="u3d-2d-WRz">
@@ -120,6 +137,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="hjl-m2-HQu">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
