@@ -18,7 +18,7 @@ class DataService {
         Product(title: "Nike Mercurial Vapor 13", imageName: "mercurialVapor13", price: "$117"),
         Product(title: "Mercurial Vapor 13 CLUB", imageName: "mercurialVapor13Club", price: "$150"),
         Product(title: "Nike Mercurial Vapor 13 CR7 Safari", imageName: "mercurialVapor13CR7Safari", price: "$260"),
-        Product(title: "Nike Mercurial 13 Elite Mbappe Rosa", imageName: "mercurialVapor13EliteMbappéRosa", price: "270"),
+        Product(title: "Nike Mercurial 13 Elite Mbappe Rosa", imageName: "mercurialVapor13EliteMbappéRosa", price: "$270"),
         Product(title: "Nike Mercurial Vapor 13 Neymar Jr.", imageName: "mercurialVapor13NeymarJr.jpg", price: "$270")
         
     ]

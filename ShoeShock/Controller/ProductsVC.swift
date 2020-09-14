@@ -31,6 +31,11 @@ class ProductsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         
         return ProductCell()
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let product = DataService.instance.getProducts()[indexPath.row]
+        performSegue(withIdentifier: "ShoeItemVC", sender: product)
+    }
 
 
 }
