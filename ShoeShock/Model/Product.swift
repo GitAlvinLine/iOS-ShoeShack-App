@@ -12,10 +12,12 @@ struct Product {
     private(set) public var title: String
     private(set) public var imageName: String
     private(set) public var price: String
+    private(set) public var description: String
     
-    init(title: String, imageName: String, price: String) {
+    init(title: String, imageName: String, price: String, description: String) {
         self.title = title
         self.imageName = imageName
         self.price = price
+        self.description = description
     }
 }

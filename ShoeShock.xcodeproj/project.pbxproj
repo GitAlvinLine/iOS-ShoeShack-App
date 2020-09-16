@@ -10,6 +10,7 @@
 		DB2DAC0B250EC20400B46C66 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2DAC0A250EC20400B46C66 /* DataService.swift */; };
 		DB2DAC0D250EC24200B46C66 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2DAC0C250EC24200B46C66 /* Product.swift */; };
 		DB2DAC0F250ECD1A00B46C66 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2DAC0E250ECD1A00B46C66 /* ProductCell.swift */; };
+		DB5A250D25102F2100089F6B /* CleatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A250C25102F2100089F6B /* CleatVC.swift */; };
 		DB8A9B65250D6CC000BE86F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A9B64250D6CC000BE86F4 /* AppDelegate.swift */; };
 		DB8A9B67250D6CC000BE86F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A9B66250D6CC000BE86F4 /* SceneDelegate.swift */; };
 		DB8A9B69250D6CC000BE86F4 /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A9B68250D6CC000BE86F4 /* ProductsVC.swift */; };
@@ -22,6 +23,7 @@
 		DB2DAC0A250EC20400B46C66 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		DB2DAC0C250EC24200B46C66 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		DB2DAC0E250ECD1A00B46C66 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		DB5A250C25102F2100089F6B /* CleatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleatVC.swift; sourceTree = "<group>"; };
 		DB8A9B61250D6CC000BE86F4 /* ShoeShock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoeShock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8A9B64250D6CC000BE86F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB8A9B66250D6CC000BE86F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				DB8A9B68250D6CC000BE86F4 /* ProductsVC.swift */,
+				DB5A250C25102F2100089F6B /* CleatVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				DB2DAC0F250ECD1A00B46C66 /* ProductCell.swift in Sources */,
 				DB8A9B67250D6CC000BE86F4 /* SceneDelegate.swift in Sources */,
 				DB2DAC0B250EC20400B46C66 /* DataService.swift in Sources */,
+				DB5A250D25102F2100089F6B /* CleatVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

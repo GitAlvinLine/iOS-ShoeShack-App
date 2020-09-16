@@ -36,6 +36,14 @@ class ProductsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         let product = DataService.instance.getProducts()[indexPath.row]
         performSegue(withIdentifier: "ShoeItemVC", sender: product)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cleatVC = segue.destination as? CleatVC {
+            assert(sender as? Product != nil)
+            cleatVC.product = sender as! Product
+//            cleatVC.initializeCleat(product: sender as! Product)
+        }
+    }
 
 
 }
