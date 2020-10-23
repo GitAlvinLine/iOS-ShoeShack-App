@@ -15,28 +15,37 @@ class CleatVC: UIViewController {
     @IBOutlet weak var cleatPrice: UILabel!
     @IBOutlet weak var cleatDescription: UILabel!
     
-    var product = Product(title: "", imageName: "", price: "", description: "")
+    private(set) public var product = Product(title: "", imageName: "", price: "", description: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateView()
-        // Hey Nate I tried making a separate file to put into the "Views" folder
-        // to organize better and update the views through the updateView() function from there
-        // But I couldn't figure out how to reference the IBOutlets to storyboard without
-        // crashing and getting a "nil" error. So I tried to make independent files of UILabel class
-        // and UIImageView class to connect to the storyboard so that I can reference @IBOutlets
-        // but it couldn't connect. I had to connect it through the "UIViewController"
-        // in order to reference the IBOutlets. That's why I declared the IBOutlets here
-        // and had to update the View here as well. 
+        addNavBarCartBtn()
     }
     
+    func initializeProduct(item: Product) {
+        product = item
+    }
+    
+    func addNavBarCartBtn() {
+        let cartButton = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(pressedCartBtn))
+        cartButton.image = UIImage(systemName: "cart")
+        navigationItem.rightBarButtonItem = cartButton
+    }
+    
+    @objc func pressedCartBtn(){
+        performSegue(withIdentifier: "CleatCheckoutVC", sender: self)
+    }
+        
     func updateView() {
         cleatImage.image = UIImage(named: product.imageName)
         cleatTitle.text = product.title
-        cleatPrice.text = product.price
+        cleatPrice.text = "$\(product.price)"
         cleatDescription.text = product.description
     }
     
-    
+    @IBAction func addCartPressed(_ sender: UIButton) {
+        DataService.instance.addToItems(cleat: product)
+    }
 
 }

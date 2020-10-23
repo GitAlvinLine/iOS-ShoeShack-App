@@ -8,14 +8,45 @@
 
 import UIKit
 
-class ProductsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+@IBDesignable
+class ProductsVC: UIViewController {
     
     @IBOutlet weak var productsCollection: UICollectionView!
-
+    
+    private var productItem = Product(title: "", imageName: "", price: "", description: "")
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         productsCollection.dataSource = self
         productsCollection.delegate = self
+        addNavBarCartBtn()
+    }
+    
+    func addNavBarCartBtn() {
+        let cartButton = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(pressedCartBtn))
+        cartButton.image = UIImage(systemName: "cart")
+        navigationItem.rightBarButtonItem = cartButton
+    }
+    
+    @objc func pressedCartBtn(){
+        performSegue(withIdentifier: "CheckoutVC", sender: self)
+    }
+
+}
+
+
+
+extension ProductsVC: UICollectionViewDelegate, UICollectionViewDataSource, ProductCellDelegate {
+    
+    func fillHeartBtn(btn: UIButton) {
+        btn.setTitle("♥", for: .normal)
+    }
+    
+    
+    func addToCart(item: ProductCell) {
+        let indexPath = self.productsCollection.indexPath(for: item)
+        let product = DataService.instance.getProducts()[indexPath!.row]
+        DataService.instance.addToItems(cleat: product)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -24,6 +55,7 @@ class ProductsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as? ProductCell {
+            cell.delegate = self
             let product = DataService.instance.getProducts()[indexPath.row]
             cell.updateViews(product: product)
             return cell
@@ -39,12 +71,7 @@ class ProductsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cleatVC = segue.destination as? CleatVC {
-            assert(sender as? Product != nil)
-            cleatVC.product = sender as! Product
-//            cleatVC.initializeCleat(product: sender as! Product)
+            cleatVC.initializeProduct(item: sender as! Product)
         }
     }
-
-
 }
-
